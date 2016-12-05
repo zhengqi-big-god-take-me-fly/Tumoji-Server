@@ -14,8 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "mongo",
-    "public": true
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -31,6 +31,14 @@
   },
   "Role": {
     "dataSource": "mongo",
+    "public": false
+  },
+  "user": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "storage": {
+    "dataSource": "storage",
     "public": false
   }
 }
