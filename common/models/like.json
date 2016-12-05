@@ -1,0 +1,31 @@
+{
+  "name": "like",
+  "base": "PersistedModel",
+  "indexes": {
+    "tagId_expressionId_index": {
+      "keys": {
+        "userId": 1,
+        "expressionId": 1
+      },
+      "options": {
+        "unique": true
+      }
+    }
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "tag": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    },
+    "expression": {
+      "type": "belongsTo",
+      "model": "expression",
+      "foreignKey": "expressionId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -7,7 +7,8 @@
       "required": true
     },
     "image": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "createdAt": {
       "type": "date"
@@ -30,6 +31,12 @@
       "model": "tag",
       "foreignKey": "expressionId",
       "through": "tagExpression"
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "user",
+      "foreignKey": "expressionId",
+      "through": "like"
     }
   },
   "acls": [

@@ -54,7 +54,11 @@
     "public": false
   },
   "image": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": true
+  },
+  "like": {
+    "dataSource": "mongo",
+    "public": false
   }
 }

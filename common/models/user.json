@@ -11,7 +11,14 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "likes": {
+      "type": "hasMany",
+      "model": "expression",
+      "foreignKey": "userId",
+      "through": "like"
+    }
+  },
   "acls": [
     {
       "accessType": "EXECUTE",
