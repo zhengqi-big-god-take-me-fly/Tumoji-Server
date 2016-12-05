@@ -1,0 +1,90 @@
+{
+  "name": "expression",
+  "base": "PersistedModel",
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "authorId": {
+      "type": {
+        "required": true
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "author": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "authorId"
+    },
+    "tags": {
+      "type": "hasMany",
+      "model": "tag",
+      "foreignKey": "expressionId",
+      "through": "tagExpression"
+    }
+  },
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": [
+        "find",
+        "findById",
+        "findByUrl",
+        "findAll",
+        "__get__tags"
+      ]
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": [
+        "create"
+      ]
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": [
+        "deleteById",
+        "updateAttributes",
+        "updateAll",
+        "upsert",
+        "__create__tags",
+        "__getById__tags",
+        "__updateById__tags",
+        "__count__tags",
+        "__exists__tags",
+        "__link__tags",
+        "__unlink__tags"
+      ]
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

@@ -55,14 +55,6 @@ module.exports = function(app, done) {
 
     var StorageSource = app.dataSources.storage;
 
-    StorageSource.connector.allowedContentTypes = [
-      'image/jpeg',
-      'image/pjpeg',
-      'image/bmp',
-      'image/gif',
-      'image/png'
-    ];
-
     StorageSource.connector.getFilename = function(file, req, res) {
       var ext = path.extname(file.name);
       var time = new Date().getTime();

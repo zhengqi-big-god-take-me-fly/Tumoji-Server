@@ -13,8 +13,7 @@ var test = function (verb, url, auth) {
       .set('Authorization', auth);
   }
 
-  return promise
-    .expect('Content-Type', /json/);
+  return promise;
 };
 
 var data = {

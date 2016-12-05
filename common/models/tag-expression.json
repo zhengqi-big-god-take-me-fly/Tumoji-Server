@@ -1,0 +1,31 @@
+{
+  "name": "tagExpression",
+  "base": "PersistedModel",
+  "indexes": {
+    "tagId_expressionId_index": {
+      "keys": {
+        "tagId": 1,
+        "expressionId": 1
+      },
+      "options": {
+        "unique": true
+      }
+    }
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "tag": {
+      "type": "belongsTo",
+      "model": "tag",
+      "foreignKey": "tagId"
+    },
+    "expression": {
+      "type": "belongsTo",
+      "model": "expression",
+      "foreignKey": "expressionId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

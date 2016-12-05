@@ -40,5 +40,21 @@
   "storage": {
     "dataSource": "storage",
     "public": false
+  },
+  "expression": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "tag": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "tagExpression": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "image": {
+    "dataSource": "db",
+    "public": true
   }
 }
