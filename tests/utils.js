@@ -1,7 +1,7 @@
 'use strict';
 
 var app = require('../server/server');
-var request = require('supertest');
+var request = require('supertest-as-promised')(Promise);
 
 var test = function (verb, url, auth) {
   var promise = request(app)[verb](url)
@@ -40,10 +40,20 @@ var data = {
     {
       title: 'why are you so diao',
       image: 'http://www.338283.com/uploads/allimg/c151013/1444Fa0KL0-24952.jpg'
-    },
-    {
+    }, {
       title: 'stand back, i am going to zhuang bi',
       image: 'http://pics.sc.chinaz.com/Files/pic/faces/3574/01.jpg'
+    }
+  ],
+  tags: [
+    {
+      name: 'tag0'
+    }, {
+      name: 'tag1'
+    }, {
+      name: 'tag2'
+    }, {
+      name: 'tag3'
     }
   ]
 };

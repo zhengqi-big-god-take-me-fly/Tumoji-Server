@@ -12,6 +12,11 @@
   },
   "validations": [],
   "relations": {
+    "expressions": {
+      "type": "hasMany",
+      "model": "expression",
+      "foreignKey": "authorId"
+    },
     "likes": {
       "type": "hasMany",
       "model": "expression",

@@ -4,8 +4,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node .",
-    "test": "INIT=1 mocha tests/main.test.js",
-    "posttest": "nsp check"
+    "test": "INIT=1 mocha tests/main.test.js"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -17,13 +16,15 @@
     "loopback-component-explorer": "^2.4.0",
     "loopback-component-storage": "^1.9.2",
     "loopback-connector-mongodb": "^1.15.2",
+    "loopback-context": "^1.0.0",
     "loopback-datasource-juggler": "^2.39.0",
     "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^1.0.1"
+    "strong-error-handler": "^1.0.1",
+    "supertest": "^2.0.1",
+    "supertest-as-promised": "^4.0.2"
   },
   "devDependencies": {
     "mocha": "^3.0.2",
-    "nsp": "^2.1.0",
     "supertest": "^2.0.0"
   },
   "repository": {

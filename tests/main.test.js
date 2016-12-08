@@ -27,5 +27,6 @@ describe('REST API request', function() {
   require('./users.test.js');
   require('./image.test.js');
   require('./expression.test.js');
+  require('./tag.test.js');
 
 });

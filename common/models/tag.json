@@ -8,7 +8,11 @@
   "properties": {
     "name": {
       "type": "string",
+      "id": true,
       "required": true
+    },
+    "description": {
+      "type": "string"
     }
   },
   "validations": [],
@@ -37,12 +41,9 @@
         "find",
         "findById",
         "findAll",
-        "__get__posts",
-        "__count__posts",
-        "__exists__posts",
-        "__get__pages",
-        "__count__pages",
-        "__exists__pages"
+        "__get__expressions",
+        "__count__expressions",
+        "__exists__expressions"
       ]
     },
     {
@@ -51,10 +52,7 @@
       "principalId": "$authenticated",
       "permission": "ALLOW",
       "property": [
-        "create",
-        "updateAttributes",
-        "updateAll",
-        "upsert"
+        "create"
       ]
     },
     {

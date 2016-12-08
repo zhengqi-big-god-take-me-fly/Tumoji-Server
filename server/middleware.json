@@ -29,7 +29,9 @@
     "helmet#noCache": {
       "enabled": false
     },
-    "loopback-context#per-request": {}
+    "loopback-context#per-request": {},
+    "loopback#token": {},
+    "./middleware/set-current-user": {}
   },
   "session": {},
   "auth": {},

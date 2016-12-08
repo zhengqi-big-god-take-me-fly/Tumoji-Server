@@ -64,7 +64,9 @@
       "principalId": "$authenticated",
       "permission": "ALLOW",
       "property": [
-        "create"
+        "create",
+        "like",
+        "unlike"
       ]
     },
     {

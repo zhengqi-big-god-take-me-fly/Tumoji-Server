@@ -1,18 +1,13 @@
 'use strict';
 
-var loopback = require('loopback');
 var loopbackContext = require('loopback-context');
 
-module.exports = function enableAuthentication(server) {
-  // enable authentication
-  server.enableAuth();
-  server.use(loopbackContext.perRequest());
-  server.use(loopback.token());
-  server.use(function setCurrentUser(req, res, next) {
+module.exports = function () {
+  return function setCurrentUser(req, res, next) {
     if (!req.accessToken) {
       return next();
     }
-    server.models.user.findById(req.accessToken.userId, function(err, user) {
+    req.app.models.user.findById(req.accessToken.userId, function(err, user) {
       if (err) {
         return next(err);
       }
@@ -25,5 +20,5 @@ module.exports = function enableAuthentication(server) {
       }
       next();
     });
-  });
+  };
 };
