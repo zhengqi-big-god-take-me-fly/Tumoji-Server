@@ -65,7 +65,7 @@ module.exports = function(Expression) {
     'unlike',
     {
       description: 'UnLike a expression',
-      http: {path: '/unlike', verb: 'post'},
+      http: {path: '/like', verb: 'delete'},
       returns: {root: true, type: 'object'},
       isStatic: false
     }

@@ -55,7 +55,15 @@
         "findById",
         "findByUrl",
         "findAll",
-        "__get__tags"
+        "count",
+        "exists",
+        "__get__author",
+        "__get__tags",
+        "__count__tags",
+        "__exists__tags",
+        "__get__likes",
+        "__count__likes",
+        "__exists__likes"
       ]
     },
     {
@@ -82,8 +90,6 @@
         "__create__tags",
         "__getById__tags",
         "__updateById__tags",
-        "__count__tags",
-        "__exists__tags",
         "__link__tags",
         "__unlink__tags"
       ]

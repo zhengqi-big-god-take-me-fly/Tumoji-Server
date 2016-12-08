@@ -26,12 +26,25 @@
   },
   "acls": [
     {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
       "accessType": "EXECUTE",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "DENY",
+      "permission": "ALLOW",
       "property": [
-        "upsert"
+        "find",
+        "findById",
+        "findByUrl",
+        "findAll",
+        "count",
+        "exists",
+        "__get__expressions",
+        "__count__expressions",
+        "__exists__expressions"
       ]
     },
     {
